@@ -1,91 +1,62 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import { Inter } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
+import Button from "./components/Button";
+import Footer from "./components/Footer";
+import Logo from "./components/Logo";
+import Wave from "./components/Wave";
+import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <>
+      <Wave />
+      <Logo />
+      <div className={styles.sideBySide}>
+        <section>
+          <div className={styles.images}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src='/smartphone.png'
+              alt='Picture of the author'
+              width={200}
+              height={400}
             />
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <section className={styles.rigthSection}>
+          <section className={styles.textSection}>
+            <h1>About</h1>
+            <h2>
+              Gone are the days of carrying around stacks of paper cards or
+              relying on outdated designs. With Digital Business Card, you can
+              <b> easily create and share your digital cards </b> with just a
+              few taps on your phone or tablet.
+            </h2>
+            <h2>
+              And the best part? Digital Business Card is eco-friendly and
+              cost-effective. You'll{" "}
+              <b>never have to worry about running out of cards</b>, or wasting
+              paper on outdated designs. With our app, you can stay ahead of the
+              game and make a lasting impression in a digital age.
+            </h2>
+            <h2>
+              But the benefits don't stop there. With our app, you can easily
+              share your digital business card with anyone, anywhere, at any
+              time. Whether you're at a networking event, on a business trip, or
+              just meeting with a potential client, you can{" "}
+              <b>instantly share your card via QR code!</b>
+            </h2>
+          </section>
+        </section>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <Footer>
+        <Link href={"/creation"}>
+        <Button>Create</Button>
+        </Link>
+      </Footer>
+    </>
+  );
 }
