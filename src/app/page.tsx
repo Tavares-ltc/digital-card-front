@@ -39,15 +39,15 @@ export default function Home() {
             </h2>
             <h2>
               And the best part? Digital Business Card is eco-friendly and
-              cost-effective. You'll{" "}
+              cost-effective. Youll
               <b>never have to worry about running out of cards</b>, or wasting
               paper on outdated designs. With our app, you can stay ahead of the
               game and make a lasting impression in a digital age.
             </h2>
             <h2>
-              But the benefits don't stop there. With our app, you can easily
+              But the benefits dont stop there. With our app, you can easily
               share your digital business card with anyone, anywhere, at any
-              time. Whether you're at a networking event, on a business trip, or
+              time. Whether youre at a networking event, on a business trip, or
               just meeting with a potential client, you can{" "}
               <b>instantly share your card via QR code!</b>
             </h2>
