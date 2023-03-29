@@ -1,0 +1,31 @@
+.main main {
+  max-height: 100vh;
+}
+.main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main h1 {
+  margin-bottom: 10vh;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px black);
+}
+#bottom {
+width: 100%;
+display: flex;
+justify-content: center;
+position: fixed;
+bottom: 0;
+}
+
+@media print {
+  .main button {
+    display: none;
+    
+  }
+}

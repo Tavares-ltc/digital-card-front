@@ -109,7 +109,7 @@ export default function CreationPage() {
               onChange={handleChange}
             />
           </div>
-          <Button type='submit'>Create</Button>
+          <Button type='submit'>Generate Image</Button>
         </form>
       </main>
     </>
@@ -130,8 +130,8 @@ export default function CreationPage() {
     try {
       const response = await serviceAPI.createCard(values);
 
-      const userData = { name: response?.name, URL: response?.customURL };
-      router.push(`/qrcode${encodeURIComponent(JSON.stringify(userData))}}`);
+      const userData = { name: response.name, URL: response.customURL };
+      router.push(`/qrcode/${encodeURIComponent(JSON.stringify(userData))}`);
     } catch (error) {
       alert("Something went wrong...");
     }

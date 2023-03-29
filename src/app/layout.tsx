@@ -12,12 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body>
-        <div className={styles.background}>
-          <div className={styles.contentWrappler}>{children}</div>
-        </div>
-      </body>
-    </html>
+      <html lang='en'>
+        <body>
+          <div className={styles.background}>
+            <div className={styles.contentWrappler}>{children}</div>
+          </div>
+        </body>
+      </html>
   );
 }
