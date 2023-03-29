@@ -1,0 +1,46 @@
+.main main {
+  max-height: 100vh;
+}
+.main div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.main h1 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px black);
+}
+.main form {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main input {
+  height: 30px;
+  background-color: rgb(214, 211, 211);
+  border-radius: 5px;
+  color: black;
+  padding-left: 5px;
+}
+
+#historyInput {
+  height: 100px;
+  min-width: 80vw;
+  max-width: 80vw;
+  background-color: rgb(214, 211, 211);
+  color: black;
+  padding: 10px 5px;
+}
+
+.main label {
+  text-align: start;
+  filter: drop-shadow(2px 2px 2px black);
+}
