@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Logo from "./components/Logo";
 import Wave from "./components/Wave";
 import styles from "./page.module.css";
+import ImageSlider from "./utils/ImageSlider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function Home() {
               width={200}
               height={400}
             />
+            <ImageSlider/>
           </div>
         </section>
 

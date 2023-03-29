@@ -49,12 +49,13 @@ export default function CreationPage() {
             />
           </div>
           <div>
-            <label htmlFor='customURL'>Customize your Businees Card URL</label>
+            <label htmlFor='customURL'>Customize your Businees Card URL (space character is not allowed)</label>
             <input
               type='text'
               name='customURL'
               placeholder=''
               id='customURL'
+              pattern="[^\s]+"
               onChange={handleChange}
             />
           </div>

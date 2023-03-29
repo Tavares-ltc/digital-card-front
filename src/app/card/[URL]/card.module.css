@@ -1,0 +1,50 @@
+.main main {
+  margin: 0 10vw 0 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main div:first-child h1{
+  font-size: 30px;
+}
+
+.main img {
+  width: 200px;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+.main h3 {
+margin-top: 30px;
+}
+.main section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+
+}
+.main footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  gap: 30px;
+}
+@media screen and (min-width: 700px){
+.main footer{
+  position: fixed;
+  text-align: center;
+}
+.main section {
+  gap: 50px;
+}
+.main div:first-child h1{
+  font-size: 60px;
+}
+.main h3 {
+  margin-top: 30px;
+  }
+  .main main {
+    gap: 100px;
+  }
+}

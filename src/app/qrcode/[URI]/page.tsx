@@ -1,10 +1,10 @@
 "use client";
 import Wave from "@/app/components/Wave";
-import { decode } from "punycode";
 import QRCode from "react-qr-code";
 import style from "./qrcode.module.css";
 import baseStyle from "../../page.module.css";
-import Footer from "@/app/components/Footer";
+import Link from "next/link";
+
 interface Props {
   params: { URI: string };
 }
@@ -15,7 +15,9 @@ export default function Qrcode({ params }: Props) {
   return (
     <div className={style.main}>
       <Wave />
-      <h1>Name: {userData.name}</h1>
+      <Link href={`/card/${userData.URL}`}>
+        <h1>Name: {userData.name}</h1>
+      </Link>
       <div
         style={{
           height: "auto",
@@ -34,8 +36,7 @@ export default function Qrcode({ params }: Props) {
       </div>
       <section id={style.bottom}>
         <button className={baseStyle.button} onClick={() => window.print()}>
-          {" "}
-          Take a print
+          Print
         </button>
       </section>
     </div>

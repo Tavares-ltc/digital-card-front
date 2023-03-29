@@ -91,6 +91,15 @@
   display: flex;
   justify-content: center;
 }
+.images img:first-of-type {
+ position: relative;
+ z-index: 1;
+}
+.images img:nth-last-of-type(1){
+  position: absolute;
+  overflow: hidden;
+  padding: 10px;
+}
 .sideBySide {
   display: flex;
   margin-left: 5%;
