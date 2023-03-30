@@ -17,15 +17,17 @@ export default function Home() {
       <Logo />
       <div className={styles.sideBySide}>
         <section>
-          <div className={styles.images}>
-            <Image
-              src='/smartphone.png'
-              alt='Picture of the author'
-              width={200}
-              height={400}
-            />
-            <ImageSlider/>
-          </div>
+          <Link href='/cad/tavares-ltc'>
+            <div className={styles.images}>
+              <Image
+                src='/smartphone.png'
+                alt='Picture of the author'
+                width={200}
+                height={400}
+              />
+              <ImageSlider />
+            </div>
+          </Link>
         </section>
 
         <section className={styles.rigthSection}>
@@ -39,7 +41,7 @@ export default function Home() {
             </h2>
             <h2>
               And the best part? Digital Business Card is eco-friendly and
-              cost-effective. Youll
+              cost-effective. You ll{" "}
               <b>never have to worry about running out of cards</b>, or wasting
               paper on outdated designs. With our app, you can stay ahead of the
               game and make a lasting impression in a digital age.
@@ -48,7 +50,7 @@ export default function Home() {
               But the benefits dont stop there. With our app, you can easily
               share your digital business card with anyone, anywhere, at any
               time. Whether youre at a networking event, on a business trip, or
-              just meeting with a potential client, you can{" "}
+              just meeting with a potential client, you can
               <b>instantly share your card via QR code!</b>
             </h2>
           </section>
@@ -56,7 +58,7 @@ export default function Home() {
       </div>
       <Footer>
         <Link href={"/creation"}>
-        <Button>Create</Button>
+          <Button>Create</Button>
         </Link>
       </Footer>
     </>
