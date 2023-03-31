@@ -1,38 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# digital-card (front-end)
+Gone are the days of carrying around stacks of paper cards or relying on outdated designs. With Digital Business Card, you can easily create and share your digital cards with just a few taps on your phone or tablet.
 
-## Getting Started
+- Poduction deploy avaliable on AWS: http://100.26.109.233/
 
-First, run the development server:
+### Nice design
+![image](https://user-images.githubusercontent.com/98609823/228962312-95e4da8c-7fad-4d82-a40d-fcc13b6b9c7a.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+### Simple to use
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/98609823/228964982-2f3f5893-bec0-40df-b16e-4b941c398f89.gif)
+
+## Technologies
+The following tools and frameworks were used in the construction of this application:
+
+  ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+  ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+## How to run
+
+* You can start both projects with docker-compose, check the monorepo here: https://github.com/Tavares-ltc/digital-card-app
+<br>
+
+1. Clone this repository
+
+```
+git clone https://github.com/Tavares-ltc/digital-card-front.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create .env like the .env.example file
+    
+3. Start the back end, use the documantation avaliable here: https://github.com/Tavares-ltc/digital-card-back
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    
+4. To start the project you will have tree options:
+  * With Docker:  <br>  
+  1.``docker build -t card-front:latest .``   <br>  
+  2.``docker run -p 3000:3000 card-front:latest``   <br>
+    <br>    
+  * Withou Docker as dev:  <br>  
+  1.``npm run dev``   <br>  
+    <br>  
+  * Withou Docker as prod:  <br>  
+  1.``npm run build``   <br>  
+  2.``npm run start``   <br> 
+    <br>  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Thats it, just navigate to http://localhost:3000
