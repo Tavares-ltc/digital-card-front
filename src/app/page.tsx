@@ -11,13 +11,15 @@ import ImageSlider from "./utils/ImageSlider";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const baseURL =
+    process.env.REACT_APP_QR_CODE_BASE_URL || "http://localhost:3000";
   return (
     <>
       <Wave />
       <Logo />
       <div className={styles.sideBySide}>
         <section>
-          <Link href='/cad/tavares-ltc'>
+          <Link href={`${baseURL}/creation`}>
             <div className={styles.images}>
               <Image
                 src='/smartphone.png'

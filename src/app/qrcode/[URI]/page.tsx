@@ -4,6 +4,7 @@ import QRCode from "react-qr-code";
 import style from "./qrcode.module.css";
 import baseStyle from "../../page.module.css";
 import Link from "next/link";
+import dotenv from "dotenv";
 
 interface Props {
   params: { URI: string };
@@ -12,10 +13,13 @@ interface Props {
 export default function Qrcode({ params }: Props) {
   const { URI } = params;
   const userData = JSON.parse(decodeURIComponent(URI));
+  const baseURL =
+    process.env.REACT_APP_QR_CODE_BASE_URL || "http://localhost:3000";
+  const link = `${baseURL}/card/${userData.URL}`;
   return (
     <div className={style.main}>
       <Wave />
-      <Link href={`/card/${userData.URL}`}>
+      <Link href={link}>
         <h1>Name: {userData.name}</h1>
       </Link>
       <div
@@ -30,7 +34,7 @@ export default function Qrcode({ params }: Props) {
         <QRCode
           size={500}
           style={{ height: "auto", maxWidth: "80%", width: "100%" }}
-          value={`/card/${userData.URL}`}
+          value={link}
           viewBox={`0 0 500 500`}
         />
       </div>
